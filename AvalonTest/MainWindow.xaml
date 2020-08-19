@@ -1,0 +1,27 @@
+﻿<Window x:Class="AvalonTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+
+        xmlns:local="clr-namespace:AvalonTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="0,0,0,22">
+        <Button x:Name="btnFile" Content="File" HorizontalAlignment="Left" Margin="160,5,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.18,-0.398" Click="btnFile_Click"/>
+        <Button x:Name="btnHighlight" Content="Highlight" HorizontalAlignment="Left" Margin="256,9,0,0" VerticalAlignment="Top" Width="75" Click="btnHighlight_Click"/>
+        <TextBox x:Name="tbLnNo" HorizontalAlignment="Left" Height="23" Margin="439,9,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="53"/>
+        <Button x:Name="btnGoToLn" Content="Goto" HorizontalAlignment="Left" Margin="363,9,0,0" VerticalAlignment="Top" Width="63" RenderTransformOrigin="-0.14,0.379" Click="btnGoToLn_Click"/>
+        <CheckBox  IsChecked="{Binding ElementName=TextEdit, Path=ShowLineNumbers}" Margin="0,0,479,271">
+            <TextBlock Width="16" TextAlignment="Center" >#</TextBlock>
+        </CheckBox>
+        <avalonEdit:TextEditor Name="TextEdit" FontFamily="Consolas" FontSize="10pt" Margin="0,32,0,0" SyntaxHighlighting="C#" IsReadOnly="True">
+            
+        </avalonEdit:TextEditor>
+        <TextBlock x:Name="tbPosition" HorizontalAlignment="Left" Margin="9,303,0,-21" TextWrapping="NoWrap"  VerticalAlignment="Top" Width="53"/>
+
+
+
+    </Grid>
+</Window>
